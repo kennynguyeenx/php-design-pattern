@@ -1,0 +1,23 @@
+{
+    "name": "kennynguyeenx/php-design-pattern",
+    "type": "library",
+    "version": "1.0",
+    "description": "Some examples for design pattern in php.",
+    "keywords": ["php", "design pattern"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kenny Nguyen",
+            "email": "kennynguyeenx@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {"Kennynguyeenx\\DesignPattern\\": "src"}
+    }
+}
