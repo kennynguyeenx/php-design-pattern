@@ -24,9 +24,11 @@ class AnimalFactory
      */
     private function __construct()
     {
-
     }
 
+    /**
+     * @return AnimalFactory
+     */
     public static function getInstance(): AnimalFactory
     {
         if (is_null(self::$instance)) {
@@ -55,12 +57,13 @@ class AnimalFactory
 
     /**
      * @param string $animalCode
+     * @param string $animalName
      * @return Animal
      */
-    public function createAnimal(string $animalCode): Animal
+    public function createAnimal(string $animalCode, string $animalName): Animal
     {
         return isset($this->registeredAnimalArray[$animalCode]) ?
-            new $this->registeredAnimalArray[$animalCode]() :
-            new NullAnimal();
+            new $this->registeredAnimalArray[$animalCode]($animalName) :
+            new NullAnimal($animalName);
     }
 }

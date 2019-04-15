@@ -2,6 +2,10 @@
 
 namespace Kennynguyeenx\DesignPattern\FactoryPattern;
 
+/**
+ * Class Animal
+ * @package Kennynguyeenx\DesignPattern\FactoryPattern
+ */
 abstract class Animal
 {
     /**
@@ -11,10 +15,11 @@ abstract class Animal
 
     /**
      * Animal constructor.
+     * @param string $name
      */
-    public function __construct()
+    public function __construct(string $name = '')
     {
-
+        $this->name = $name;
     }
 
     /**
@@ -28,7 +33,7 @@ abstract class Animal
     /**
      * @param string $name
      */
-    public function setName(string $name): void
+    public function setName(string $name)
     {
         $this->name = $name;
     }
